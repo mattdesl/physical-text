@@ -1,0 +1,70 @@
+{
+  "name": "physical-text",
+  "version": "1.0.0",
+  "description": "simulating text in the physical world",
+  "main": "index.js",
+  "license": "MIT",
+  "author": {
+    "name": "Matt DesLauriers",
+    "email": "dave.des@gmail.com",
+    "url": "https://github.com/mattdesl"
+  },
+  "dependencies": {
+    "arc-to": "^1.0.1",
+    "canvas-fit": "^1.4.0",
+    "clamp": "^1.0.1",
+    "defined": "^1.0.0",
+    "domready": "^1.0.8",
+    "eases": "^1.0.6",
+    "es6-denodeify": "^0.1.1",
+    "es6-promise": "^2.1.1",
+    "glsl-aastep": "^1.0.1",
+    "glsl-diffuse-lambert": "^1.0.0",
+    "glsl-diffuse-oren-nayar": "^1.0.2",
+    "glsl-face-normal": "^1.0.1",
+    "glsl-inverse": "^1.0.0",
+    "glsl-noise": "0.0.0",
+    "glsl-perturb-normal": "^1.0.1",
+    "glsl-specular-beckmann": "^1.1.2",
+    "glsl-specular-blinn-phong": "^1.0.0",
+    "glsl-specular-cook-torrance": "^2.0.1",
+    "load-bmfont": "^1.2.3",
+    "object-assign": "^2.0.0",
+    "raf-loop": "^1.0.1",
+    "randf": "^1.0.0",
+    "run-series": "^1.1.0",
+    "three": "^0.71.0",
+    "three-bmfont-text": "^1.0.7",
+    "three-line-2d": "^1.0.9",
+    "three-orbit-controls": "^69.0.4",
+    "three-orbit-viewer": "^69.3.0",
+    "touch-position": "^1.0.3",
+    "touches": "^1.1.1",
+    "tween-ticker": "^3.3.1",
+    "tweenr": "^2.1.3"
+  },
+  "devDependencies": {
+    "babelify": "^6.0.2",
+    "budo": "^4.0.0",
+    "errorify": "^0.2.4",
+    "garnish": "^2.1.3",
+    "glslify": "^2.1.2"
+  },
+  "scripts": {
+    "test": "node test.js",
+    "start": "budo index.js -t babelify -t glslify -p errorify --live | garnish"
+  },
+  "keywords": [
+    "webgl",
+    "physical",
+    "text"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mattdesl/physical-text.git"
+  },
+  "homepage": "https://github.com/mattdesl/physical-text",
+  "bugs": {
+    "url": "https://github.com/mattdesl/physical-text/issues"
+  }
+}
