@@ -27,8 +27,9 @@ function showAsset(index) {
       plane.visible = true
       text.visible = true
       text.update(gl, preset)
+      app.render()
     })
 }
 
-showAsset(0)
+showAsset(2)
 window.showAsset = showAsset

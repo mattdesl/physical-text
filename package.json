@@ -52,7 +52,7 @@
   },
   "scripts": {
     "test": "node test.js",
-    "start": "budo index.js -t babelify -t glslify -p errorify --live | garnish"
+    "start": "budo index.js:bundle.js -t babelify -t glslify -p errorify --live | garnish"
   },
   "keywords": [
     "webgl",

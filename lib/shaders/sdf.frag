@@ -42,6 +42,7 @@ void main() {
   float stroke = dist;
   // float stroke = alpha + noise2(uv * 20.0 * randomness) * 0.5;
 
+  
   if (graffiti == 1) {
     float dist2 = dist + noise2(vUv * 10.0 * randomness) * 0.4;
     stroke = ink(1, dist2, vUv);
