@@ -9,6 +9,7 @@ import addText from './lib/add-text'
 import loadAssets, { count as assetCount } from './lib/load-preset'
 import addEvents from './lib/dom'
 
+const $ = document.querySelector.bind(document)
 const cameraDefault = new THREE.Vector3(0, 0, -0.3)
 const origin = new THREE.Vector3()
 
@@ -21,6 +22,7 @@ const maxAnisotropy = renderer.getMaxAnisotropy()
 // const spinner = addSpinner(app)
 const plane = addPlane(app)
 const text = addText(app, plane)
+const spinner = $('.icon.spinner')
 
 let current = 0
 app.next = function(dir) {
@@ -34,15 +36,13 @@ app.next = function(dir) {
 
 app.showAsset = function(index) {
   current = index
-  plane.visible = false
-  text.visible = false
+  spinner.style.display = 'block'
   loadAssets(index, { anisotropy: maxAnisotropy })
     .then(preset => {
       plane.maps(preset.maps)
-      plane.visible = true
-      text.visible = true
       text.update(gl, preset)
       app.render()
+      spinner.style.display = 'none'
     })
 }
 
