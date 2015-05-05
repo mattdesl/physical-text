@@ -58,6 +58,6 @@ app.reset = function() {
   app.showAsset(current)
 }
 
-app.showAsset(1)
+app.showAsset(2)
 fastclick(document.body)
 addEvents(app)

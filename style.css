@@ -31,7 +31,7 @@ body {
   text-transform: none;
   line-height: 1;
   font-size: 200%;
-  text-shadow: 2px 2px 1px hsla(0, 0%, 0%, 0.1);
+  text-shadow: 2px 2px 0px hsla(0, 0%, 0%, 0.1);
   cursor: pointer;
   display: inline-block;
   padding: 0px 5px;
@@ -39,7 +39,7 @@ body {
   color: white;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
 
-  opacity: 0.75;
+  opacity: 1.0;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
@@ -57,7 +57,7 @@ body {
   user-select: none;
 }
 .icon:hover {
-  text-shadow: 3px 3px 5px hsla(0, 0%, 0%, 0.15);
+  text-shadow: 3px 3px 6px hsla(0, 0%, 0%, 0.15);
   opacity: 1.0;
 }
 
