@@ -3,7 +3,6 @@ global.THREE = THREE
 
 import create from './lib/create-scene'
 import fastclick from 'fastclick'
-// import addSpinner from './lib/add-spinner'
 import addPlane from './lib/add-plane'
 import addText from './lib/add-text'
 
@@ -59,6 +58,6 @@ app.reset = function() {
   app.showAsset(current)
 }
 
-app.showAsset(2)
+app.showAsset(1)
 fastclick(document.body)
 addEvents(app)
