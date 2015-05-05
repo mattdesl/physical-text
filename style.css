@@ -21,7 +21,7 @@ body {
   font-style: normal;
 }
 
-.icon {
+.icon, .icon:active {
   font-family: 'icomoon';
   cursor: pointer;
   speak: none;
@@ -30,13 +30,15 @@ body {
   font-variant: normal;
   text-transform: none;
   line-height: 1;
-  font-size: 32px;
+  font-size: 200%;
   text-shadow: 2px 2px 1px hsla(0, 0%, 0%, 0.1);
   cursor: pointer;
   display: inline-block;
   padding: 0px 5px;
   margin: 0;
   color: white;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+
   opacity: 0.75;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
@@ -46,11 +48,19 @@ body {
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .icon:hover {
   text-shadow: 3px 3px 5px hsla(0, 0%, 0%, 0.15);
   opacity: 1.0;
 }
+
 
 .icon.reload:before {
   content: "\e984";

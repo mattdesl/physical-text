@@ -2,7 +2,7 @@ import THREE from 'three'
 global.THREE = THREE
 
 import create from './lib/create-scene'
-
+import fastclick from 'fastclick'
 // import addSpinner from './lib/add-spinner'
 import addPlane from './lib/add-plane'
 import addText from './lib/add-text'
@@ -50,6 +50,7 @@ app.showAsset = function(index) {
 app.resetView = function() {
   app.camera.position.copy(cameraDefault)
   app.camera.lookAt(origin)
+  app.controls.target.copy(origin)
   app.controls.update()
 }
 
@@ -59,4 +60,5 @@ app.reset = function() {
 }
 
 app.showAsset(2)
+fastclick(document.body)
 addEvents(app)
