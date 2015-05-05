@@ -7,9 +7,14 @@ import create from './lib/create-scene'
 import addPlane from './lib/add-plane'
 import addText from './lib/add-text'
 
-import loadAssets from './lib/load-preset'
+import loadAssets, { count as assetCount } from './lib/load-preset'
+import addEvents from './lib/dom'
+
+const cameraDefault = new THREE.Vector3(0, 0, -0.3)
+const origin = new THREE.Vector3()
 
 const app = create()
+
 const renderer = app.renderer
 const gl = renderer.getContext()
 const maxAnisotropy = renderer.getMaxAnisotropy()
@@ -18,7 +23,18 @@ const maxAnisotropy = renderer.getMaxAnisotropy()
 const plane = addPlane(app)
 const text = addText(app, plane)
 
-function showAsset(index) {
+let current = 0
+app.next = function(dir) {
+  current += dir
+  if (current > assetCount-1)
+    current = 0
+  if (current < 0)
+    current = assetCount-1
+  app.showAsset(current)
+}
+
+app.showAsset = function(index) {
+  current = index
   plane.visible = false
   text.visible = false
   loadAssets(index, { anisotropy: maxAnisotropy })
@@ -31,5 +47,16 @@ function showAsset(index) {
     })
 }
 
-showAsset(2)
-window.showAsset = showAsset
+app.resetView = function() {
+  app.camera.position.copy(cameraDefault)
+  app.camera.lookAt(origin)
+  app.controls.update()
+}
+
+app.reset = function() {
+  app.resetView()
+  app.showAsset(current)
+}
+
+app.showAsset(2)
+addEvents(app)

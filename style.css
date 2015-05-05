@@ -1,0 +1,73 @@
+body {
+  background: white;
+  overflow: hidden;
+}
+
+.buttons {
+  display: inline-block;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src:url('assets/font/icomoon.eot?-cu98hc');
+  src:url('assets/font/icomoon.eot?#iefix-cu98hc') format('embedded-opentype'),
+    url('assets/font/icomoon.woff?-cu98hc') format('woff'),
+    url('assets/font/icomoon.ttf?-cu98hc') format('truetype'),
+    url('assets/font/icomoon.svg?-cu98hc#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.icon {
+  font-family: 'icomoon';
+  cursor: pointer;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  font-size: 32px;
+  text-shadow: 2px 2px 1px hsla(0, 0%, 0%, 0.1);
+  cursor: pointer;
+  display: inline-block;
+  padding: 0px 5px;
+  margin: 0;
+  color: white;
+  opacity: 0.75;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon:hover {
+  text-shadow: 3px 3px 5px hsla(0, 0%, 0%, 0.15);
+  opacity: 1.0;
+}
+
+.icon.reload:before {
+  content: "\e984";
+}
+
+.icon.zoom-in:before {
+  content: "\e987";
+}
+
+.icon.zoom-out:before {
+  content: "\e988";
+}
+
+.icon.right:before {
+  content: "\ea42";
+}
+
+.icon.left:before {
+  content: "\ea44";
+}
