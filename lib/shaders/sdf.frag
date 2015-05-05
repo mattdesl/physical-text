@@ -71,7 +71,7 @@ void main() {
   // vec3 specularLight = vec3(1.0) * specularStrength * specular(L, V, surfaceNormal, shininess);
   
   // vec3 diffuseLight = lightColor * diffuse(L, surfaceNormal);
-  vec3 diffuseLight = lightColor * diffuse2(L, V, surfaceNormal, 1.0, 1.0);
+  vec3 diffuseLight = lightColor * diffuse2(L, V, surfaceNormal, 1.0, 1.2);
   vec3 bgColor = texture2D(bgDiffuse, vBgUv).rgb;
 
   vec3 diffuseColor = color;
@@ -79,10 +79,10 @@ void main() {
     vec3 paintColor = mix(vec3(0.2), color, stroke);
     diffuseColor = mix(paintColor, bgColor, 0.1);
   }
-  // vec3 finalColor = color;
+  
   vec3 finalColor = diffuseColor * (diffuseLight + ambientLightColor) + specularLight;
   
-  gl_FragColor.rgb = diffuseLight;
+  gl_FragColor.rgb = finalColor;
   gl_FragColor.a = alpha * opacity;
   if (gl_FragColor.a < 0.06)
     discard;
