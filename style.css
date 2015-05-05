@@ -62,16 +62,50 @@ body {
 }
 
 
+@-webkit-keyframes rotating {
+    from{
+        -webkit-transform: rotate(0deg);
+    }
+    to{
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+.icon.spinner {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  display: inline-block;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  font-size: 40px;
+  text-align: center;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 1.0;
+  margin: auto;
+  cursor: auto;
+  -moz-animation: rotating 2s linear infinite;
+  -ms-animation: rotating 2s linear infinite;
+  -o-animation: rotating 2s linear infinite;
+  -webkit-animation: rotating 2s linear infinite;
+  animation: rotating 2s linear infinite;
+}
+
+
 .icon.reload:before {
   content: "\e984";
 }
 
-.icon.zoom-in:before {
-  content: "\e987";
-}
-
-.icon.zoom-out:before {
-  content: "\e988";
+.icon.spinner:before {
+  content: "\e981";
 }
 
 .icon.right:before {
