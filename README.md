@@ -2,6 +2,8 @@
 
 [![experimental](http://badges.github.io/stability-badges/dist/experimental.svg)](http://github.com/badges/stability-badges)
 
+![text](http://i.imgur.com/sLYhJz4.jpg)
+
 Demo for a blog post:  
 
 [Material Design on the GPU](http://mattdesl.svbtle.com/material-design-on-the-gpu)
