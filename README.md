@@ -2,11 +2,13 @@
 
 [![experimental](http://badges.github.io/stability-badges/dist/experimental.svg)](http://github.com/badges/stability-badges)
 
-simulating text in the physical world
+Demo for a blog post:  
 
-## Usage
+[Material Design on the GPU](http://mattdesl.svbtle.com/material-design-on-the-gpu)
 
-[![NPM](https://nodei.co/npm/physical-text.png)](https://www.npmjs.com/package/physical-text)
+Full demo:
+
+http://mattdesl.github.io/physical-text/index.html
 
 ## License
 
