@@ -40,8 +40,6 @@ void main() {
   float dist = texColor.a;
   float alpha = 0.0;
   float stroke = dist;
-  // float stroke = alpha + noise2(uv * 20.0 * randomness) * 0.5;
-
   
   if (graffiti == 1) {
     float dist2 = dist + noise2(vUv * 10.0 * randomness) * 0.4;
@@ -50,11 +48,6 @@ void main() {
   } else {
     alpha = ink(0, dist, vUv);
   }
-
-
-  // vec3 diffuse = texture2D(bgDiffuse, vBgUv).rgb;
-  // diffuse *= 0.4;
-  // vec3 diffuse = color;
 
 
   //get light properties from ThreeJS
@@ -68,20 +61,16 @@ void main() {
   
   float specularStrength = texture2D(bgSpecular, vBgUv).r;
   vec3 specularLight = vec3(1.0) * specularStrength * specular(L, V, surfaceNormal, shininess);
-  // vec3 specularLight = vec3(1.0) * specularStrength * specular(L, V, surfaceNormal, shininess);
-  
-  // vec3 diffuseLight = lightColor * diffuse(L, surfaceNormal);
   vec3 diffuseLight = lightColor * diffuse2(L, V, surfaceNormal, 1.0, 1.2);
   vec3 bgColor = texture2D(bgDiffuse, vBgUv).rgb;
 
   vec3 diffuseColor = color;
-  if (graffiti == 1) {
+  if (graffiti == 1) { //add some more variety
     vec3 paintColor = mix(vec3(0.2), color, stroke);
     diffuseColor = mix(paintColor, bgColor, 0.1);
   }
   
   vec3 finalColor = diffuseColor * (diffuseLight + ambientLightColor) + specularLight;
-  
   gl_FragColor.rgb = finalColor;
   gl_FragColor.a = alpha * opacity;
   if (gl_FragColor.a < 0.06)

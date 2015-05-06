@@ -19,7 +19,6 @@ const renderer = app.renderer
 const gl = renderer.getContext()
 const maxAnisotropy = renderer.getMaxAnisotropy()
 
-// const spinner = addSpinner(app)
 const plane = addPlane(app)
 const text = addText(app, plane)
 const spinner = $('.icon.spinner')
