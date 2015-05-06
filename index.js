@@ -5,9 +5,9 @@ import create from './lib/create-scene'
 import fastclick from 'fastclick'
 import addPlane from './lib/add-plane'
 import addText from './lib/add-text'
+import addEvents from './lib/add-events'
 
 import loadAssets, { count as assetCount } from './lib/load-preset'
-import addEvents from './lib/dom'
 
 const $ = document.querySelector.bind(document)
 const cameraDefault = new THREE.Vector3(0, 0, -0.3)
@@ -19,7 +19,6 @@ const renderer = app.renderer
 const gl = renderer.getContext()
 const maxAnisotropy = renderer.getMaxAnisotropy()
 
-// const spinner = addSpinner(app)
 const plane = addPlane(app)
 const text = addText(app, plane)
 const spinner = $('.icon.spinner')
